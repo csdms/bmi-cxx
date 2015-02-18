@@ -4,9 +4,10 @@ build:
   brew:
     formula: csdms/tools/bmi-cxx
     options: "--HEAD"
-include:
+includes:
   - "#include <heat/bmi_heat.hxx>"
 cflags:
   pkgconfig: heatcxx
 libs:
   pkgconfig: heatcxx
+grids: uniform_rectilinear
