@@ -21,7 +21,7 @@ before_install:
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
   - conda install python=$TRAVIS_PYTHON_VERSION
-  - conda install gcc libgfortran cmake
+  - conda install gcc cmake
 install:
   - mkdir _build
   - cd _build
