@@ -1,9 +1,0 @@
-summary:
-  An example of a model that implements the C++-bindings for the Basic Modeling
-  Interface. This model solves the 2D Heat equation on a uniform rectilinear
-  grid.
-url: https://github.com/csdms/bmi-cxx
-author: Eric Hutton
-email: eric.hutton@colorado.edu
-version: 0.1
-license: MIT
