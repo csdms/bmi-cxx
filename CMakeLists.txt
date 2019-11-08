@@ -1,9 +1,17 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.0)
 
-project (heat)
+project(bmicxx CXX)
 
-add_subdirectory (heat)
-add_subdirectory (testing)
+set(BMI_VERSION 2.0)
 
-include (CTest)
+configure_file(${CMAKE_SOURCE_DIR}/${CMAKE_PROJECT_NAME}.pc.cmake
+  ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.pc)
 
+install(
+  FILES bmi.hxx
+  DESTINATION include
+)
+install(
+  FILES ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.pc
+  DESTINATION lib/pkgconfig
+)
