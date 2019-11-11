@@ -40,7 +40,7 @@ namespace bmi {
       // Variable getters
       virtual void GetValue(const char *name, void *dest) = 0;
       virtual void *GetValuePtr(const char *name) = 0;
-      virtual void *GetValueAtIndices(const char *name, void *dest, int *inds, int count) = 0;
+      virtual void GetValueAtIndices(const char *name, void *dest, int *inds, int count) = 0;
 
       // Variable setters
       virtual void SetValue(const char *name, void *src) = 0;
