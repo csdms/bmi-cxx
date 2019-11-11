@@ -18,24 +18,24 @@ namespace bmi {
 
       // Model information functions.
       virtual void GetComponentName(char * const name) = 0;
-      virtual int GetInputItemCount(void) = 0;
-      virtual int GetOutputItemCount(void) = 0;
+      virtual int GetInputItemCount() = 0;
+      virtual int GetOutputItemCount() = 0;
       virtual void GetInputVarNames(char **names) = 0;
       virtual void GetOutputVarNames(char **names) = 0;
 
       // Variable information functions
       virtual int GetVarGrid(const char *name) = 0;
       virtual void GetVarType(const char *name, char *type) = 0;
-      virtual void GetVarUnits (const char *name, char *units) = 0;
+      virtual void GetVarUnits(const char *name, char *units) = 0;
       virtual int GetVarItemsize(const char *name) = 0;
       virtual int GetVarNbytes(const char *name) = 0;
       virtual void GetVarLocation(const char *name, char *location) = 0;
 
-      virtual double GetCurrentTime(void) = 0;
-      virtual double GetStartTime(void) = 0;
-      virtual double GetEndTime(void) = 0;
+      virtual double GetCurrentTime() = 0;
+      virtual double GetStartTime() = 0;
+      virtual double GetEndTime() = 0;
       virtual void GetTimeUnits(char *units) = 0;
-      virtual double GetTimeStep(void) = 0;
+      virtual double GetTimeStep() = 0;
 
       // Variable getters
       virtual void GetValue(const char *name, void *dest) = 0;
@@ -69,4 +69,3 @@ namespace bmi {
       virtual void GetGridNodesPerFace(const int, int *nodes_per_face) = 0;
   };
 }
-
