@@ -24,12 +24,12 @@ namespace bmi {
       virtual void GetOutputVarNames(char **names) = 0;
 
       // Variable information functions
-      virtual int GetVarGrid(const char *name) = 0;
-      virtual void GetVarType(const char *name, char *type) = 0;
-      virtual void GetVarUnits(const char *name, char *units) = 0;
-      virtual int GetVarItemsize(const char *name) = 0;
-      virtual int GetVarNbytes(const char *name) = 0;
-      virtual void GetVarLocation(const char *name, char *location) = 0;
+      virtual int GetVarGrid(std::string name) = 0;
+      virtual void GetVarType(std::string name, char *type) = 0;
+      virtual void GetVarUnits(std::string name, char *units) = 0;
+      virtual int GetVarItemsize(std::string name) = 0;
+      virtual int GetVarNbytes(std::string name) = 0;
+      virtual void GetVarLocation(std::string name, char *location) = 0;
 
       virtual double GetCurrentTime() = 0;
       virtual double GetStartTime() = 0;
@@ -38,13 +38,13 @@ namespace bmi {
       virtual double GetTimeStep() = 0;
 
       // Variable getters
-      virtual void GetValue(const char *name, void *dest) = 0;
-      virtual void *GetValuePtr(const char *name) = 0;
-      virtual void GetValueAtIndices(const char *name, void *dest, int *inds, int count) = 0;
+      virtual void GetValue(std::string name, void *dest) = 0;
+      virtual void *GetValuePtr(std::string name) = 0;
+      virtual void GetValueAtIndices(std::string name, void *dest, int *inds, int count) = 0;
 
       // Variable setters
-      virtual void SetValue(const char *name, void *src) = 0;
-      virtual void SetValueAtIndices(const char *name, int *inds, int count, void *src) = 0;
+      virtual void SetValue(std::string name, void *src) = 0;
+      virtual void SetValueAtIndices(std::string name, int *inds, int count, void *src) = 0;
 
       // Grid information functions
       virtual int GetGridRank(const int grid) = 0;
