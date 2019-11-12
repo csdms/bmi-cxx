@@ -11,7 +11,7 @@ namespace bmi {
   class Bmi {
     public:
       // Model control functions.
-      virtual void Initialize(const char *config_file) = 0;
+      virtual void Initialize(std::string config_file) = 0;
       virtual void Update() = 0;
       virtual void UpdateUntil(double time) = 0;
       virtual void Finalize() = 0;
