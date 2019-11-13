@@ -17,7 +17,7 @@ namespace bmi {
       virtual void Finalize() = 0;
 
       // Model information functions.
-      virtual void GetComponentName(char * const name) = 0;
+      virtual std::string GetComponentName() = 0;
       virtual int GetInputItemCount() = 0;
       virtual int GetOutputItemCount() = 0;
       virtual void GetInputVarNames(char **names) = 0;
@@ -25,16 +25,16 @@ namespace bmi {
 
       // Variable information functions
       virtual int GetVarGrid(std::string name) = 0;
-      virtual void GetVarType(std::string name, char *type) = 0;
-      virtual void GetVarUnits(std::string name, char *units) = 0;
+      virtual std::string GetVarType(std::string name) = 0;
+      virtual std::string GetVarUnits(std::string name) = 0;
       virtual int GetVarItemsize(std::string name) = 0;
       virtual int GetVarNbytes(std::string name) = 0;
-      virtual void GetVarLocation(std::string name, char *location) = 0;
+      virtual std::string GetVarLocation(std::string name) = 0;
 
       virtual double GetCurrentTime() = 0;
       virtual double GetStartTime() = 0;
       virtual double GetEndTime() = 0;
-      virtual void GetTimeUnits(char *units) = 0;
+      virtual std::string GetTimeUnits() = 0;
       virtual double GetTimeStep() = 0;
 
       // Variable getters
@@ -49,7 +49,7 @@ namespace bmi {
       // Grid information functions
       virtual int GetGridRank(const int grid) = 0;
       virtual int GetGridSize(const int grid) = 0;
-      virtual void GetGridType(const int grid, char *type) = 0;
+      virtual std::string GetGridType(const int grid) = 0;
 
       virtual void GetGridShape(const int grid, int *shape) = 0;
       virtual void GetGridSpacing(const int grid, double *spacing) = 0;
@@ -66,6 +66,6 @@ namespace bmi {
       virtual void GetGridEdgeNodes(const int grid, int *edge_nodes) = 0;
       virtual void GetGridFaceEdges(const int grid, int *face_edges) = 0;
       virtual void GetGridFaceNodes(const int grid, int *face_nodes) = 0;
-      virtual void GetGridNodesPerFace(const int, int *nodes_per_face) = 0;
+      virtual void GetGridNodesPerFace(const int grid, int *nodes_per_face) = 0;
   };
 }
