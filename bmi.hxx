@@ -20,8 +20,8 @@ namespace bmi {
       virtual std::string GetComponentName() = 0;
       virtual int GetInputItemCount() = 0;
       virtual int GetOutputItemCount() = 0;
-      virtual void GetInputVarNames(char **names) = 0;
-      virtual void GetOutputVarNames(char **names) = 0;
+      virtual void GetInputVarNames(std::vector<std::string>&) = 0;
+      virtual void GetOutputVarNames(std::vector<std::string>&) = 0;
 
       // Variable information functions
       virtual int GetVarGrid(std::string name) = 0;
