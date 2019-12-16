@@ -1,3 +1,6 @@
+#ifndef BMI_HXX
+#define BMI_HXX
+
 namespace bmi {
 
   const int BMI_SUCCESS = 0;
@@ -69,3 +72,5 @@ namespace bmi {
       virtual void GetGridNodesPerFace(const int grid, int *nodes_per_face) = 0;
   };
 }
+
+#endif
