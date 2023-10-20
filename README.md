@@ -7,7 +7,7 @@
 # bmi-cxx
 
 C++ bindings for the CSDMS
-[Basic Model Interface](https://bmi-spec.readthedocs.io).
+[Basic Model Interface](https://bmi.readthedocs.io).
 
 
 ## Build/Install
@@ -37,6 +37,8 @@ To install the C++ BMI bindings from source with cmake, run
 
 where `<path-to-installation>` is the base directory
 in which to install the bindings (`/usr/local` is the default).
+When using a conda environment,
+use the `$CONDA_PREFIX` environment variable.
 
 The installation will look like:
 
@@ -65,10 +67,10 @@ run the following in a [Developer Command Prompt](https://docs.microsoft.com/en-
 	  -DCMAKE_BUILD_TYPE=Release
 	cmake --build . --target install --config Release
 
-where `<path-to-installation>` is the base directory
-in which to install the bindings (`"C:\Program Files (x86)"` is the default;
-note that quotes and an absolute path are needed).
-
+where `<path-to-installation>` is the base directory in which to install the bindings.
+The default is `"C:\Program Files (x86)"`.
+Note that quotes and an absolute path are needed.
+When using a conda environment, use `"%CONDA_PREFIX%\Library"`.
 
 ## Use
 
