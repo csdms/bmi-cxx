@@ -7,6 +7,9 @@
 #ifndef BMI_HXX
 #define BMI_HXX
 
+#include <string>
+#include <vector>
+
 namespace bmi {
 
   const int BMI_SUCCESS = 0;
